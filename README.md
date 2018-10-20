@@ -67,15 +67,15 @@ message AddressBook {
 
 然后是在vs中新建一个项目protobufDemo：
 
-![1539953568218](C:\Users\0AQZ0\AppData\Roaming\Typora\typora-user-images\1539953568218.png)
+![1539953568218](https://wx2.sinaimg.cn/mw690/006CI9WXly1fwf51fq5phj31g91000v7.jpg)
 
 把编辑好的addressbook.proto消息定义文件放在工程文件夹下：
 
-![1539953657218](C:\Users\0AQZ0\AppData\Roaming\Typora\typora-user-images\1539953657218.png)
+![1539953657218](https://wx4.sinaimg.cn/mw690/006CI9WXly1fwf51lrikyj31930pkdgl.jpg)
 
 同时将libprotobuf.dll、libprotoc.dll、protoc.exe放在工程文件夹下（这三个文件的原始路径：C:\Users\0AQZ0\myProject\vcpkg\packages\protobuf_x64-windows\tools\protobuf)：
 
-![1539953742016](C:\Users\0AQZ0\AppData\Roaming\Typora\typora-user-images\1539953742016.png)
+![1539953742016](https://wx3.sinaimg.cn/mw690/006CI9WXly1fwf51mua2tj31930pkdh7.jpg)
 
 在当前目录下打开cmd，使用protobuf编译器进行生成class：
 
@@ -91,11 +91,11 @@ protoc -I=C:\Users\0AQZ0\Documents\ExerciseCode\C++\vs\protobufDemo\protobufDemo
 
 如下图：
 
-![1539953908870](C:\Users\0AQZ0\AppData\Roaming\Typora\typora-user-images\1539953908870.png)
+![1539953908870](https://wx2.sinaimg.cn/mw690/006CI9WXly1fwf51xglgrj31i70t7400.jpg)
 
 会看到生成一个头文件和一个源文件：
 
-![1539953955786](C:\Users\0AQZ0\AppData\Roaming\Typora\typora-user-images\1539953955786.png)
+![1539953955786](https://wx2.sinaimg.cn/mw690/006CI9WXly1fwf51y2vb4j31930pkdhl.jpg)
 
 然后在工程中加入这两个文件，就可以在程序中调用protobuf生成的class。
 
@@ -259,6 +259,7 @@ int main(int argc, char* argv[]) {
 ```
 
 GOOGLE_PROTOBUF_VERIFY_VERSION
+
 ShutdownProtobufLibrary
 
 ### 4. 向前兼容的一些规则
