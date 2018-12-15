@@ -49,11 +49,11 @@ message AddressBook {
 }
 ```
 
-.proto文件需要首先声明是哪一个package，以避免命名冲突。生成的class会被放在以package为名字的命名空间。
+:sparkles: .proto文件需要首先声明是哪一个package，以避免命名冲突。生成的class会被放在以package为名字的命名空间。
 
-像Person、AddressBook这种就是name，像Person里面的name、id、email之类的就是field。field可以是一些基本的变量类型，例如bool、int32、float、double、string。不同message还可以嵌套，还可以定义enum类型。
+:sparkles:像Person、AddressBook这种就是name，像Person里面的name、id、email之类的就是field。field可以是一些基本的变量类型，例如bool、int32、float、double、string。不同message还可以嵌套，还可以定义enum类型。
 
-每个field都有一个tag：
+:sparkles:每个field都有一个tag：
 
 - required：必需的，没有初始化会报错
 - optional：可选的，没有设置的话会使用默认值
@@ -77,7 +77,7 @@ message AddressBook {
 
 ![1539953742016](https://wx3.sinaimg.cn/mw690/006CI9WXly1fwf51mua2tj31930pkdh7.jpg)
 
-在当前目录下打开cmd，使用protobuf编译器进行生成class：
+:sparkles:在当前目录下打开cmd，使用protobuf编译器进行生成class：
 
 ```bash
 protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
@@ -105,7 +105,7 @@ protoc -I=C:\Users\0AQZ0\Documents\ExerciseCode\C++\vs\protobufDemo\protobufDemo
 
 每种message都会生成一个class，有很多成员函数（accessor）可以得到或者改变message中的信息：
 
-set设置，has返回有没有，clear清空
+:sparkles:set设置，has返回有没有，clear清空
 
 对于字符串可以使用mutable，直接返回一个指向字符串的指针
 
@@ -124,7 +124,7 @@ set设置，has返回有没有，clear清空
 
 参考：[complete API documentation for `Message`](https://developers.google.com/protocol-buffers/docs/reference/cpp/google.protobuf.message.html#Message)。
 
-序列化和解析的工具：
+:sparkles:序列化和解析的工具：
 
 - `bool SerializeToString(string* output) const;`: 序列化消息并存储在给定的字符串里，格式是二进制的，字符串只是一个container.
 - `bool ParseFromString(const string& data);`: 从字符串解析出消息.
